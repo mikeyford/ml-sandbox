@@ -1,6 +1,6 @@
 # tf-sandbox
 
-cd private-aws
+cd ec2-gpu.pem
 
-ssh -i "private-aws.pem" -L 8000:localhost:8888 ubuntu@ec2-18-218-15-164.us-east-2.compute.amazonaws.com
+ssh -i "ec2-gpu.pem" -L 8000:localhost:8888 ec2-54-246-222-212.eu-west-1.compute.amazonaws.com
 
