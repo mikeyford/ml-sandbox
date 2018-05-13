@@ -1,7 +1,8 @@
 # tf-sandbox
 
-cd ec2-gpu
+aws ec2 start-instances --instance-ids i-0ddc324a28a46caca
 
-ssh -i "ec2-gpu.pem" -L 8000:localhost:8888 ubuntu@ec2-34-244-112-41.eu-west-1.compute.amazonaws.com
+aws ec2 describe-instances --instance-ids i-0ddc324a28a46caca --query 'Reservations[].Instances[].PublicDnsName'
 
+ssh -i "ec2-gpu/ec2-gpu.pem" -L 8000:localhost:8888 ubuntu@dns
 
